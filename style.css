@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    /*
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;*/
+    align-items: center;
+
+}
+
+html{
+    margin: 0;
+    top: 0;
+    padding: 0;
+}
+
+header {
+    padding: 5px 10px;
+    top: 0;
+    background-color: #7b7b7b;
+    margin: 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+header h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.2em;
+    color: white;
+}
+
+header button {
+    padding: 4px 10px;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 4px;
+    background-color: #5a5a5a;
+    color: white;
+    border: none;
+    font-size: 0.9em;
+}
+
+header button:hover {
+    background-color: #4d4d4d;
+}
+
+#menu{
+    display: inline;
+    position: absolute;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 350px;
+}
+
+.menu{
+    display: none;
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+.menu h2{
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.menu h3{
+    margin: 5px;
+    margin-left: 32px;
+    font-size: 18px;
+    color: #333;
+    text-align: left;
+}
+
+.menu button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu button:hover {
+    background-color: #0056b3;
+}
+
+.menu input {
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#opcie {
+    width: 250px;
+    text-align: left;
+}
+
+#opcie input {
+    display: inline;
+}
+
+#opcie h3 {
+    display: inline;
+    margin: 0px;
+}
+#opcie h2 {
+    text-align: center;
+}
+
+#opcie label {
+    display: inline;
+}
+
+#manualny-GUI{
+    display: none;
+}
+
+#odkladacze {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 250px;
+    float: right;
+    margin-right: 15px;
+    user-select: none;
+}
+
+#holdery, #endingi {
+    
+    /*
+    display: inline;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;*/
+    
+    background-color: #e9ecef;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*width: 538px; 
+        align-items: center;
+    justify-items: center;*/
+    width: 120px;
+    height: 570px;
+}
+
+#tablica {
+    display: flex;
+    gap: 0px;
+    flex-wrap:nowrap; /* featcher */
+    justify-content: center;
+    user-select: none;
+}
+
+.stak {
+    display: flex;
+    flex-direction: column;
+    gap: 0px; /* kurczenie sie */
+    padding: 10px;
+    background-color: #ebebeb;
+    border: 1px solid #adadad;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: static;
+}
+
+.nowy{
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100px;
+    height: 120px;
+    position: relative;
+    font-size: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nowy h3 {
+    margin: 0px;
+    font-size: 1.5em;
+    width: 2.5em;
+    display: inline;
+    margin-left: 5px;
+}
+
+.nowy h1 {
+    margin: 0px;
+    font-size: 4em;
+    text-align: center;
+    padding: 4px;
+}
+
+.nowy img {
+    height: 1.5em;
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 5px;
+}
+
+.nowy h3:nth-of-type(2) {
+    float: right;
+    width: 0.5em;
+    margin-right: 5px;
+}
+.nowy img:nth-of-type(2) {
+    float: right;
+    left: 59%;
+    height: 1.5em;
+    margin-left: 0px;
+}
+
+.empty {
+    background-color: grey;
+}
+
+.dragable {
+    background-color: lightcyan;
+}
+
+.nowy:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.czerwony {
+    color: crimson;
+    border: rgba(256, 0, 0, 0.25) 2px solid;
+    /*
+    text-shadow:
+    1px 1px 0px black,
+    -1px -1px 0px black,
+    1px -1px 0px black,
+    -1px 1px 0px black;*/
+}
+
+.czarny {
+    border: rgba(0, 0, 0, 0.25) 2px solid;
+    color: black
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gra w Karty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button id="start-button" onclick="start()"><h3>Zacznij grę</h3></button>
+        <button id="statystyki-buton" onclick="opcjieHeader(0)"><h3>Statystyki</h3></button>
+        <button id="poradnik-button" onclick="opcjieHeader(1)"><h3>Poradnik</h3></button>
+        <button id="opcie-button" onclick="opcjieHeader(2)"><h3>Opcje</h3></button>
+        <button id="o-mnie-button" onclick="opcjieHeader(3)"><h3>O mnie</h3></button>
+        <button id="cofnij" onclick="cofanieRuchu()"><h3>Cofnij</h3></button>
+
+    </header>
+    <div id="menu">
+        <div class="menu" id="statystyki">
+            <h2>Statystyki</h2>
+            <h3 id="wygrane">Wygrane: 0</h3>
+            <h3 id="rozegrane">Rozegrane: 0</h3>
+            <h3 id="biezacy_streak">Bieżący streak: 0</h3>
+            <h3 id="najlepszy_streak">Najlepszy streak: 0</h3>
+        </div>
+
+        <div class="menu" id="poradnik">
+            <p>Niebędę ci tłumaczył jak grać w pasjansa, poradzisz sobie</p>
+        </div>
+
+        <div class="menu" id="opcie">
+            <h2>Opcje</h2>
+            <label for="auto"><h3>Tryb autoukładania</h3></label>
+            <input type="checkbox" id="auto" checked>
+            <br>
+            <label for="auto-opuznienie"><h3>Opóźnienie autoukładania: </h3></label>
+            <input type="number" id="auto-opuznienie" min="0" value="250"><h3>ms</h3>
+            <br>
+            <label for="flexwrap"><h3>Flexwrap</h3></label>
+            <input type="checkbox" id="flexwrap">
+            <br>
+
+            <label for="ile-kart"><h3>Ilość kart w jednym kolorze: </h3></label>
+            <input type="number" id="ile-kart" min="1" value="13"/>
+            <br>
+            <label for="znaki"><h3>Znaki kart (A, J, Q, K)</h3></label>
+            <input type="checkbox" id="znaki" checked>
+            <br>
+            <label for="manual"><h3>Tryb manualny</h3></label>
+            <input type="checkbox" id="manual">
+            <br>
+            <div id="manualny-GUI">
+                <label for="ile">Ile:</label>
+                <input id="ile" type="number" min="1" />
+                <br>
+                <label for="k1">Skąd:</label>
+                <input id="k1" type="number" min="0" />
+                <br>
+                <label for="k2">Dokąd:</label>
+                <input id="k2" type="number" min="0" />
+                <button onclick="wykonaj()">Wykonaj</button>
+            </div>
+            <button onclick="sprawdzOpcie()">Zapisz</button>
+        </div>
+
+        <div class="menu" id="o-mnie">
+            <h2>O mnie</h2>
+            <p>Jestem Bartłomiej Kaniewski i ta strona powstała na dzień technika 2025</p>
+        </div>
+    </div>
+
+    <div id="odkladacze">
+        <div id="holdery">
+            <h3>Holdery</h3>
+        </div>
+        <div id="endingi">
+            <h3>Endingi</h3>
+        </div>
+    </div>
+    <br>
+    <div id="tablica"></div>
+    <script src="script.js"></script>
+</body>
+</html>
